@@ -14,60 +14,6 @@ odoo.define('jt_product_ncscolor.VariantMixin', function (require) {
 
     require('website_sale.website_sale');
 
-    /*
-    * @param {MouseEvent} ev
-    * @param {$.Element} $parent
-    * @param {Array} combination
-    */
-    VariantMixin._onChangeCombinationNcsColor = function (ev, $parent, combination) {
-        // Based on :
-        // https://github.com/odoo/odoo/blob/59c3b7b09023316012b5b63e859d713033ee2b4e/addons/sale/static/src/js/variant_mixin.js#L106
-
-        console.log("not this one");
-        console.log(combination);
-        // var $variantContainer;
-        // var $customInput = false;
-        // var $target = $(ev.target);
-        // console.log($target);
-
-        // if ($target.is('input[type=radio]') && $target.is(':checked')) {
-        //     $variantContainer = $target.closest('ul').closest('li');
-        //     $customInput = $target;
-        // } else if ($target.is('select')) {
-        //     $variantContainer = $target.closest('li');
-        //     $customInput = $target
-        //         .find('option[value="' + $target.val() + '"]');
-        // }
-
-        // console.log("step 0");
-        // if ($variantContainer) {
-        //     if ($customInput && $customInput.data('is_custom') === 'True') {
-        //         var attributeValueId = $customInput.data('value_id');
-        //         var attributeValueName = $customInput.data('value_name');
-        //         console.log("step 1");
-        //         if ($variantContainer.find('.variant_custom_value').length === 0
-        //             || $variantContainer
-        //                 .find('.variant_custom_value')
-        //                 .data('custom_product_template_attribute_value_id') !== parseInt(attributeValueId)) {
-
-        //             $variantContainer.find('.variant_custom_value')
-        //             console.log("step 2");
-        //             const params = new URLSearchParams(location.search);
-        //             if (params.has('customvalue')) {
-        //                 console.log("step 3");
-        //                 $variantContainer.value = params.get('customvalue');
-        //                 console.log("customvalue is " + params.get('customvalue'));
-        //             }
-
-
-        //         }
-
-        //     }
-        // }
-
-    };
-
-
     /**
      * Will add the "custom value" input for this attribute value if
      * the attribute value is configured as "custom" (see product_attribute_value.is_custom)
