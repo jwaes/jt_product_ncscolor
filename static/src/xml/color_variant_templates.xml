@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+    <t t-name="jt_product_ncscolor.ralcolor">
+        <select class="variant_custom_value custom-select css_attribute_select mt-2" 
+            t-att-data-custom_product_template_attribute_value_id="attribute_value_id"
+            t-att-data-attribute_value_name="attribute_value_name">
+            <t t-foreach="ralcolors" t-as="ralcolor">
+                <option t-attf-style="background-color:{{ralcolor.hex}}"><span class="bg-light">RAL <t t-esc="ralcolor.ral"/></span></option>                
+            </t>
+        </select>
+    </t>
+</templates>

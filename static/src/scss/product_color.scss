@@ -1,0 +1,15 @@
+
+
+.css_attribute_color.custom_value.ral {
+    background: str-replace(url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' ><style>.txt {font: bold 14px sans-serif; fill: grey;}</style><text x='50%' y='50%' class='txt' dominant-baseline='middle' text-anchor='middle'>RAL</text></svg>"), "#", "%23") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.css_attribute_color.custom_value.ncs {
+    background: str-replace(url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' ><style>.txt {font: bold 14px sans-serif; fill: grey;}</style><text x='50%' y='50%' class='txt' dominant-baseline='middle' text-anchor='middle'>NCS</text></svg>"), "#", "%23") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
