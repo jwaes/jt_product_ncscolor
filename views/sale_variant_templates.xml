@@ -6,6 +6,7 @@
 
             
             <t t-if="ptal.attribute_id.display_type == 'color'">
+                <div class="color_label"/>
                 <ul t-att-data-attribute_id="ptal.attribute_id.id" t-attf-class="list-inline  #{'d-none' if single_and_custom else ''}">
                     <li t-foreach="ptal.product_template_value_ids._only_active()" t-as="ptav" class="list-inline-item mr-1">
                         <label t-attf-style="background-color:#{ptav.html_color or ptav.product_attribute_value_id.name if not (ptav.is_custom or ptav.is_css) else ''}"

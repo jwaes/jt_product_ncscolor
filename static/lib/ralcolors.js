@@ -1,4 +1,3 @@
-console.log("it is I, the ral colors");
 var ralcolors = [
     {
       "ral": 1000,
