@@ -108,6 +108,7 @@ odoo.define('jt_product_ncscolor.VariantMixin', function (require) {
                                 var color = $(this).children(':selected').css("background-color");
                                 $(this).css("background-color", color);
                                 var $label = $('label.active');
+                                console.log("background color to " + color)
                                 $label.css("background-color", color);
                                 $(this).data('parentlabel', $label);
                             });
