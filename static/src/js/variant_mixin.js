@@ -54,7 +54,7 @@ odoo.define('jt_product_ncscolor.VariantMixin', function (require) {
 
                     if ($customInput.data('is_ncs') === 'True'){
 
-                        $customValue.attr('placeholder', 'enter valid ncs code: NCS 3030-Y30R');
+                        $customValue.attr('placeholder', 'enter valid ncs code: e.g. NCS 3030-Y30R');
 
                         $customValue.on('input', function(ev){                            
                             var $label = $('label.active');
