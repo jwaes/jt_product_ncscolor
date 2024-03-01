@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
-    <record id="product_attribute_view_form_inherit_product" model="ir.ui.view">
-        <field name="model">product.attribute</field>
-        <field name="inherit_id" ref="product.product_attribute_view_form"/>
-        <field name="arch" type="xml">
-            <field name="html_color" position="after">        
-                <field name="is_ncs" attrs="{'column_invisible': [('parent.display_type', '!=', 'color')], 'readonly':[('is_custom','!=',True)]}" />                
-                <field name="is_ral" attrs="{'column_invisible': [('parent.display_type', '!=', 'color')], 'readonly':[('is_custom','!=',True)]}" /> 
-            </field>
-        </field>
-    </record>
-
+ <record id="product_attribute_view_form_inherit_product" model="ir.ui.view">
+  <field name="model">product.attribute</field>
+  <field name="inherit_id" ref="product.product_attribute_view_form"/>
+  <field name="arch" type="xml">
+   <field name="html_color" position="after">
+    <field column_invisible="parent.display_type != 'color'" name="is_ncs" readonly="is_custom != True"/>
+    <field column_invisible="parent.display_type != 'color'" name="is_ral" readonly="is_custom != True"/></field></field>
+ </record>
 </odoo>

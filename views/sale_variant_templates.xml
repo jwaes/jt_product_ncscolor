@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <template id="variants" inherit_id="sale.variants">
+    <template id="variants" inherit_id="website_sale.variants">
         <xpath expr="//li/t[last()]" position="replace">
 
             
