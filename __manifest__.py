@@ -29,11 +29,14 @@
         'views/sale_variant_templates.xml',
     ],
     'assets': {
-        'web.assets_common': [
-            'jt_product_ncscolor/static/lib/w3color.js',
-            'jt_product_ncscolor/static/lib/ralcolors.js',
-            'jt_product_ncscolor/static/src/js/variant_mixin.js',
-            'jt_product_ncscolor/static/src/scss/*',
-        ],
+        # 'web.assets_common': [
+        #     'jt_product_ncscolor/static/lib/w3color.js',
+        #     'jt_product_ncscolor/static/lib/ralcolors.js',
+        #     'jt_product_ncscolor/static/src/js/variant_mixin.js',
+        #     'jt_product_ncscolor/static/src/scss/*',
+        # ],
+        'web.assets_frontend': [
+            'jt_product_ncscolor/static/src/**/*',
+        ],            
     },       
 }
