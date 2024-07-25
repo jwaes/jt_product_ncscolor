@@ -1,31 +1,9 @@
 /** @odoo-module **/
+
 import VariantMixin from "@website_sale/js/variant_mixin";
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { renderToElement } from "@web/core/utils/render";
 
-// odoo.define('jt_product_ncscolor.VariantMixin', function (require) {
-//     'use strict';
-
-//     // const { Markup } = require('web.utils');
-//     var VariantMixin = require('sale.VariantMixin');
-//     var publicWidget = require('web.public.widget');
-//     var ajax = require('web.ajax');
-//     var core = require('web.core');
-//     var QWeb = core.qweb;
-
-//     const loadXml = async () => {
-//         return ajax.loadXML('/jt_product_ncscolor/static/src/xml/color_variant_templates.xml', QWeb);
-//     };
-
-//     require('website_sale.website_sale');
-
-//     /**
-//      * Will add the "custom value" input for this attribute value if
-//      * the attribute value is configured as "custom" (see product_attribute_value.is_custom)
-//      *
-//      * @private
-//      * @param {MouseEvent} ev
-//      */
 
 VariantMixin.handleNCSCustomValues = function ($target) {
 
@@ -98,39 +76,29 @@ VariantMixin.handleNCSCustomValues = function ($target) {
 
                     $variantContainer.find('.variant_custom_value').remove();
 
-                    loadXml().then(function (result) {
-                        // const $select = $(QWeb.render(
-                        //     'jt_product_ncscolor.ralcolor',
-                        //     {
-                        //         'attribute_value_id': attributeValueId,
-                        //         'attribute_value_name': attributeValueName,
-                        //         'ralcolors': ralcolors,
-                        //     }
-                        // ));
-                        $variantContainer.append($renderToElement('jt_product_ncscolor.ralcolor',
-                            {
-                                'attribute_value_id': attributeValueId,
-                                'attribute_value_name': attributeValueName,
-                                'ralcolors': ralcolors,
-                            } || ''));
+                    $variantContainer.append(renderToElement('jt_product_ncscolor.ralcolor',
+                        {
+                            'attribute_value_id': attributeValueId,
+                            'attribute_value_name': attributeValueName,
+                            'ralcolors': ralcolors,
+                        } || ''));
 
-                        var $sel = $('select');
-                        $sel.on('change', function (ev) {
-                            var color = $(this).children(':selected').css("background-color");
-                            $(this).css("background-color", color);
-                            var $label = $('label.active');
-                            if ($label.hasClass("ral")) {
-                                console.log("background color to " + color)
-                                $label.css("background-color", color);
-                            }
-                            $(this).data('parentlabel', $label);
-                        });
-                        $sel.trigger('change');
-                        $sel.on('remove', function (ev) {
-                            $(this).data('parentlabel').css("background-color", 'transparent');
-                        });
+                    var $sel = $('select');
+                    $sel.on('change', function (ev) {
+                        var color = $(this).children(':selected').css("background-color");
+                        $(this).css("background-color", color);
+                        var $label = $('label.active');
+                        if ($label.hasClass("ral")) {
+                            console.log("background color to " + color)
+                            $label.css("background-color", color);
+                        }
+                        $(this).data('parentlabel', $label);
                     });
-                }
+                    $sel.trigger('change');
+                    $sel.on('remove', function (ev) {
+                        $(this).data('parentlabel').css("background-color", 'transparent');
+                    });
+            }
             }
         }
     }
