@@ -43,19 +43,19 @@ VariantMixin.handleNCSCustomValues = function ($target) {
                     $customValue.on('input', function (ev) {
                         var $label = $('label.active');
                         var input = $(this);
-                        var re = /^(?:NCS|NCS\s?S)\s?(\d{2})(\d{2})-(N|[NYRG])(\d{2})?([NYRG])?$/;
+                        var re = /^(?:NCS|NCS\s?S)\s?(\d{2})(\d{2})-(N|[NYRG])(\d{2})?([NYRGB])?$/;
                         var ncs_input = input.val();
                         var valid_ncscolor = re.test(ncs_input);
                         var $cart = $('#add_to_cart');
                         if (valid_ncscolor) {
                             input.removeClass("is-invalid").addClass("valid");
                             $cart.removeClass("disabled");
-                            input.css("background-color", w3color(ncs_input).toRgbString());
+                            // input.css("background-color", w3color(ncs_input).toRgbString());
                             $label.css("background-color", w3color(ncs_input).toRgbString());
                         } else {
                             input.addClass("is-invalid");
                             $cart.addClass("disabled");
-                            input.css("background-color", "transparent");
+                            // input.css("background-color", "transparent");
                             $label.css("background-color", "transparent");
                         }
 
