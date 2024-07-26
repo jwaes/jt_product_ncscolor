@@ -15,6 +15,6 @@
     background-size: contain;
 }
 
-.css_attribute_color.custom_value.ncs :not(.active) {
-    background-color: transparent;
+.css_attribute_color.custom_value :not(.active) {
+    background-color: transparent !important;
 }
