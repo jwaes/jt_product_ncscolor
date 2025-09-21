@@ -14,7 +14,7 @@
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '18.0.1.0.0',
+    'version': '18.0.1.0.1',
 
     # any module necessary for this one to work correctly
     'depends': [
@@ -30,14 +30,12 @@
         'views/sale_variant_templates.xml',
     ],
     'assets': {
-        # 'web.assets_common': [
-        #     'jt_product_ncscolor/static/lib/w3color.js',
-        #     'jt_product_ncscolor/static/lib/ralcolors.js',
-        #     'jt_product_ncscolor/static/src/js/variant_mixin.js',
-        #     'jt_product_ncscolor/static/src/scss/*',
-        # ],
         'web.assets_frontend': [
-            'jt_product_ncscolor/static/src/**/*',
+            'jt_product_ncscolor/static/src/libs/w3color.js',
+            'jt_product_ncscolor/static/src/libs/ralcolors.js',
+            'jt_product_ncscolor/static/src/js/variant_mixin.js',
+            'jt_product_ncscolor/static/src/scss/*',
+            'jt_product_ncscolor/static/src/xml/*',
         ],            
     },       
 }
