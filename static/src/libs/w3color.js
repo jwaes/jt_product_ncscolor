@@ -429,7 +429,7 @@
       if (hue < 360) {return "M" + ((hue - 300) / 0.6); }
     }
     function ncsToRgb(ncs){
-      var black, chroma, bc, percent, black1, chroma1, red1, factor1, blue1, red1, red2, green2, blue2, max, factor2, grey, r, g, b; 
+      var black, chroma, bc, percent, black1, chroma1, red1, factor1, blue1, green1, red2, green2, blue2, max, factor2, grey, r, g, b; 
       ncs = w3trim(ncs).toUpperCase();
       ncs = ncs.replace("(", "");
       ncs = ncs.replace(")", "");
