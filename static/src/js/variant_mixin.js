@@ -1,8 +1,6 @@
 import VariantMixin from "@website_sale/js/sale_variant_mixin";
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { renderToElement } from "@web/core/utils/render";
-import ralcolors from "@jt_product_ncscolor/lib/ralcolors";
-import w3color from "@jt_product_ncscolor/lib/w3color";
 
 
 VariantMixin.handleNCSCustomValues = function ($target) {
@@ -50,8 +48,8 @@ VariantMixin.handleNCSCustomValues = function ($target) {
                         if (valid_ncscolor) {
                             input.removeClass("is-invalid").addClass("valid");
                             $cart.removeClass("disabled");
-                            // input.css("background-color", w3color(ncs_input).toRgbString());
-                            $label.css("background-color", w3color(ncs_input).toRgbString());
+                            // input.css("background-color", window.w3color(ncs_input).toRgbString());
+                            $label.css("background-color", window.w3color(ncs_input).toRgbString());
                         } else {
                             input.addClass("is-invalid");
                             $cart.addClass("disabled");
@@ -80,7 +78,7 @@ VariantMixin.handleNCSCustomValues = function ($target) {
                         {
                             'attribute_value_id': attributeValueId,
                             'attribute_value_name': attributeValueName,
-                            'ralcolors': ralcolors,
+                            'ralcolors': window.ralcolors,
                         } || ''));
 
                     var $sel = $('select');
