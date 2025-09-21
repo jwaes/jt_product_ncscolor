@@ -30,11 +30,9 @@
         'views/sale_variant_templates.xml',
     ],
     'assets': {
-        'web.assets_common': [
+        'web.assets_frontend': [
             'jt_product_ncscolor/static/lib/w3color.js',
             'jt_product_ncscolor/static/lib/ralcolors.js',
-        ],
-        'web.assets_frontend': [
             'jt_product_ncscolor/static/src/js/variant_mixin.js',
             'jt_product_ncscolor/static/src/scss/*',
             'jt_product_ncscolor/static/src/xml/*',
