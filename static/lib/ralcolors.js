@@ -852,3 +852,5 @@ window.ralcolors = [
       "hex": "#797B7A"
     }
 ];
+
+export default window.ralcolors;

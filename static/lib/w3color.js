@@ -644,3 +644,5 @@
         }
       }
     }
+    
+export default window.w3color;

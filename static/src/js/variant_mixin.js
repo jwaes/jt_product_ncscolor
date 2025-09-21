@@ -1,6 +1,8 @@
 import VariantMixin from "@website_sale/js/sale_variant_mixin";
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { renderToElement } from "@web/core/utils/render";
+import ralcolors from "@jt_product_ncscolor/lib/ralcolors";
+import w3color from "@jt_product_ncscolor/lib/w3color";
 
 
 VariantMixin.handleNCSCustomValues = function ($target) {
