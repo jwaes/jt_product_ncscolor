@@ -1,4 +1,4 @@
-var ralcolors = [
+window.ralcolors = [
     {
       "ral": 1000,
       "hex": "#CDBA88"
